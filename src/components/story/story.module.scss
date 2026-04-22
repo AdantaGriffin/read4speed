@@ -1,16 +1,17 @@
 .story{
     position: relative;
     top: 200px;
-    height: 100vh;
+    height: 70vh;
     font-family: "Oswald";
     scroll-margin-top: 210px;
-    border: 3px solid red;
     display: grid;
-    grid-template-rows: 10% 50% 10%;
+    grid-template-rows: 10% 80% 10%;
+    align-items: center;
 }
 .bio{
     display: grid;
     grid-template-columns: 40% 60%;
+    height: 100%;
     .bioDetails{
         height: 60%;
         width: 80%;
@@ -36,20 +37,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    button{
-        width: 80%;
-        height: 80%;
-        border-radius: 10px;
-        background-color: rgb(80, 159, 233);
+    width: 30%;
+    margin: auto;
+    background-color: rgb(80, 159, 233);
+    border-radius: 10px;
+    a{
         color: white;
-        font-family: "Oswald";
-        font-size: clamp(40px, 5vw, 80px);
-        &:hover {
-            cursor: pointer;
-        }
-        &:active{
-            box-shadow: inset 1px 1px 10px black;
-        }
+        text-decoration: none;
     }
 }
 .hero, .bio, .start{

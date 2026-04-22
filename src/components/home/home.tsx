@@ -16,9 +16,9 @@ function Home(){
                     <h2>Feel Good Stories</h2>
                     <div>
                         {feelGood.map(x => (
-                            <Link onClick={toTop} key={x.id} to={`/genre1/${x.id}`}>
-                                <article id={styles.mara} className={styles.story}>
-                                    
+                            <Link className={styles.articleLink} onClick={toTop} key={x.id} to={`/genre1/${x.id}`}>
+                                <article className={styles.story}>
+                                    <img src={x.cover}/>
                                 </article>
                             </Link>
                         ))}
@@ -31,8 +31,8 @@ function Home(){
                     <div>
                         {horror.map(x => (
                             <Link onClick={toTop} key={x.id} to={`/genre2/${x.id}`}>
-                                <article id={styles.dog} className={styles.story}>
-                                    
+                                <article className={styles.story}>
+                                    <img src={x.cover}/>
                                 </article>
                             </Link>
                         ))}

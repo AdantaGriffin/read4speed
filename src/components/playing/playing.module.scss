@@ -1,13 +1,14 @@
 .playing{
     position: relative;
     top: 200px;
-    height: 100vh;
+    height: 65vh;
     font-family: "Oswald";
     .displayContainer{
         border: 2px solid black;
-        height: 50%;
+        height: 70%;
         align-content: center;
         text-align: center;
+        font-size: 1.2em;
     }
 }
 .buttons{
@@ -22,6 +23,10 @@
         border-radius: 10px;
         &:hover{
             cursor: pointer;
+            border: 3px solid black;
+        }
+        &:focus{
+            border: 3px solid red;
         }
     }
 }

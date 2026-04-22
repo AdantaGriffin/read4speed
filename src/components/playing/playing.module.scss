@@ -20,5 +20,8 @@
         background-color: rgb(80, 159, 233);
         color: white;
         border-radius: 10px;
+        &:hover{
+            cursor: pointer;
+        }
     }
 }

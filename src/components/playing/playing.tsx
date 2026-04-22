@@ -10,7 +10,7 @@ function Playing(){
     const navigate = useNavigate();
     const {feelGood, horror, filter, setFilter} = useApi();
     const [visibleText, setVisibleText] = useState("");
-    const [setIndex] = useState(0);
+    const [, setIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);
     const words = filter[0]?.story?.join(" ").split(" ") || [];
 
@@ -41,7 +41,7 @@ function Playing(){
                 return prev;
             }
 
-            const nextIndex = prev + 5;
+            const nextIndex = (prev + 5);
 
             setVisibleText(words.slice(prev, nextIndex).join(" "));
             return nextIndex;
@@ -60,7 +60,7 @@ function Playing(){
                     {visibleText}
                 </div>
                 <div className={styles.buttons}>
-                    <button onClick={() => {{toTop}; setIsPlaying(false); setIndex(0); setVisibleText("");navigate("/")}}>end</button>
+                    <button onClick={() => {toTop(); setIsPlaying(false); setIndex(0); setVisibleText("");navigate("/")}}>end</button>
                     <button onClick={() => setIsPlaying(false)}>pause</button>
                     <button onClick={() => setIsPlaying(true)}>play</button>
                 </div>

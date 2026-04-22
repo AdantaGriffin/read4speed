@@ -10,7 +10,7 @@ function Playing(){
     const navigate = useNavigate();
     const {feelGood, horror, filter, setFilter} = useApi();
     const [visibleText, setVisibleText] = useState("");
-    const [index, setIndex] = useState(0);
+    const [setIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);
     const words = filter[0]?.story?.join(" ").split(" ") || [];
 

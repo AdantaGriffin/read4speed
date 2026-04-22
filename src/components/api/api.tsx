@@ -14,7 +14,7 @@ type ApiContextType = {
 };
 const ApiContext = createContext<ApiContextType | null>(null);
 
-export function ApiProvider({children}){
+export function ApiProvider({ children }: { children: React.ReactNode }){
     
     //create all useState and functions here to be exported via API Provider 
    const [feelGood, setFeelGood] = useState<Story[]>([]);

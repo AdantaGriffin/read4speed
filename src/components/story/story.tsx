@@ -1,5 +1,5 @@
 import styles from './story.module.scss';
-import {useState, useEffect} from 'react';
+import {useEffect} from 'react';
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import { useApi } from '../api/api';
@@ -12,7 +12,7 @@ function Story(){
     //console.log(feelGood)
     const {id} = useParams();
     //console.log(id)
-    const grabId = id.slice(0, 2);
+    const grabId = id?.slice(0, 2);
 
     useEffect(() => {
         switch(grabId){

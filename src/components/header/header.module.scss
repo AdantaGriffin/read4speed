@@ -1,0 +1,47 @@
+
+
+
+.header{
+    height: 150px;
+    display: grid;
+    grid-template-rows: 80% 20%;
+    background-image: url(images/logoLarge.PNG);
+    background-size: 100% 100%;
+    opacity: .97;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+
+
+.headerNavigation{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 30px;
+    height: 55px;
+    background-color: white;
+    border-bottom: 1px solid grey;
+    box-shadow: 1px 1px 1px lightgray;
+
+    .hashlink{
+        border: 1px solid black;
+        width: 100px;
+        height: 30px;
+        align-content: center;
+        text-align: center;
+        background: linear-gradient(white, rgb(80, 159, 233));
+        border-radius: 10px;
+        color: white;
+        text-decoration: none;
+        font-family: "Anton";
+
+        &:active{
+            box-shadow: inset 1px 1px 10px black;
+        }
+    }
+}

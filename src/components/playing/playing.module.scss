@@ -1,0 +1,24 @@
+.playing{
+    position: relative;
+    top: 200px;
+    height: 100vh;
+    font-family: "Oswald";
+    .displayContainer{
+        border: 2px solid black;
+        height: 50%;
+        align-content: center;
+        text-align: center;
+    }
+}
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    button{
+        width: 100px;
+        background-color: rgb(80, 159, 233);
+        color: white;
+        border-radius: 10px;
+    }
+}

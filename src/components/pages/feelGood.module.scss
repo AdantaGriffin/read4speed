@@ -1,0 +1,27 @@
+.feelGood{
+    position: relative;
+    top: 210px;
+    font-family: "Oswald";
+    border: 1px solid grey;
+    height: 900px;
+    background-color: rgb(80, 159, 233);
+    padding: 10px;
+}
+.home{
+    position: relative;
+    z-index: 10;
+    position: fixed;
+    bottom: 40px;
+    right: 45%;
+}
+div{
+    article{
+        border: 1px solid black;
+        height: 200px;
+        width: 150px;
+    }
+}
+#mara{
+    background-image: url("images/Mara.png");
+    background-size: 100% 100%;
+}

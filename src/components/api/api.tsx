@@ -2,6 +2,7 @@ import {useState, useEffect, createContext, useContext} from 'react';
 type Story = {
     id: string;
     name: string;
+    cover: string;
     story: string[];
     brief?: string;
     wordct?: number;

@@ -1,5 +1,4 @@
 import styles from './header.module.scss';
-import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 function Header(){

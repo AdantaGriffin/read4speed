@@ -1,13 +1,25 @@
-import React, {useState, useEffect, createContext, useContext} from 'react';
-
-const ApiContext = createContext();
+import {useState, useEffect, createContext, useContext} from 'react';
+type Story = {
+    id: string;
+    name: string;
+    story: string[];
+    brief?: string;
+    wordct?: number;
+};
+type ApiContextType = {
+    feelGood: Story[];
+    horror: Story[];
+    filter: Story[];
+    setFilter: React.Dispatch<React.SetStateAction<Story[]>>;
+};
+const ApiContext = createContext<ApiContextType | null>(null);
 
 export function ApiProvider({children}){
     
     //create all useState and functions here to be exported via API Provider 
-    const [feelGood, setFeelGood] = useState([]);
-    const [horror, setHorror] = useState([]);
-    const [filter, setFilter] = useState('');
+   const [feelGood, setFeelGood] = useState<Story[]>([]);
+    const [horror, setHorror] = useState<Story[]>([]);
+    const [filter, setFilter] = useState<Story[]>([]); 
     useEffect(() => {
         async function getData(){
             const response = await fetch('/stories.json');
@@ -37,5 +49,11 @@ export function ApiProvider({children}){
 }
 
 export function useApi(){
-    return useContext(ApiContext);
+    const context = useContext(ApiContext);
+
+    if (!context) {
+        throw new Error("useApi must be used within ApiProvider");
+    }
+
+    return context;
 }

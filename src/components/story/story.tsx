@@ -33,7 +33,6 @@ function Story(){
 
     return(
         <>
-            STORY {id}
             <section className={styles.story}>
                 <section className={styles.hero}>
                     <h2>{filter[0]?.name} </h2>

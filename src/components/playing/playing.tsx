@@ -60,9 +60,9 @@ function Playing(){
                     {visibleText}
                 </div>
                 <div className={styles.buttons}>
-                    <button onClick={() => {toTop(); setIsPlaying(false); setIndex(0); setVisibleText("");navigate("/")}}>end</button>
-                    <button onClick={() => setIsPlaying(false)}>pause</button>
-                    <button onClick={() => setIsPlaying(true)}>play</button>
+                    <button onClick={() => {toTop(); setIsPlaying(false); setIndex(0); setVisibleText("");navigate("/")}}>END</button>
+                    <button onClick={() => setIsPlaying(false)}>PAUSE</button>
+                    <button onClick={() => setIsPlaying(true)}>PLAY</button>
                 </div>
             </section>
         </>

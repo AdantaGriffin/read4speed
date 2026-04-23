@@ -1,35 +1,37 @@
 .feelGood{
-    position: relative;
-    top: 210px;
     font-family: "Oswald";
     border: 1px solid grey;
     height: 70vh;
-    background-color: rgb(80, 159, 233);
+    background-color: #3A5A73;
     padding: 10px;
 }
 .home{
     position: relative;
     z-index: 10;
     position: fixed;
-    bottom: 10px;
+    bottom: 0px;
     right: 5%;
+    color: #F5F1EA;
 }
 .feelGoodLinks{
-    border: 1px solid red;
+    height: 75%;
     display: flex;
     gap: 10px;
     overflow-x: scroll;
     article{
+        position: relative;
+        top: 5px;
+        left: 5px;
+        border-radius: 10px;
         height: 200px;
         width: 120px;
         img{
-            height: 100%;
-            width: 100%;
+            height: 99%;
+            width: 99%;
             border-radius: 10px;
         }
+        &:hover{
+            box-shadow: 1px 1px 1px 5px #F5F1EA;;
+        }
     }
-}
-#mara{
-    background-image: url("images/Mara.png");
-    background-size: 100% 100%;
 }

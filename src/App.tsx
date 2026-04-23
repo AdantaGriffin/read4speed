@@ -1,3 +1,4 @@
+import styles from './App.module.scss';
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
 import Root from './components/root/root';
 import Home from './components/home/home';
@@ -32,7 +33,7 @@ const AppRouter = createBrowserRouter(createRoutesFromElements(
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.app}>
       <RouterProvider router={AppRouter}/>
     </div>
   );

@@ -8,7 +8,7 @@ function Story(){
     const toTop= () => {
         window.scrollTo(0,0);
     };
-    const {feelGood, horror, love, adventure, level, setLevel, filter, setFilter} = useApi();
+    const {feelGood, horror, love, adventure, setLevel, filter, setFilter} = useApi();
     //console.log(feelGood)
     const {id} = useParams();
     //console.log(id)
@@ -35,11 +35,7 @@ function Story(){
     }, [grabId])
     //console.log(filter)
 
-    const levelSetter = (e) => {
-        const level = e.target.value;
-        //console.log(level);
-        setLevel(level);
-    }
+    
     return(
         <>
             <section className={styles.story}>
@@ -59,7 +55,7 @@ function Story(){
 
                 <section className={styles.bottom}>
                     <section className={styles.levels}>
-                        <button onClick={levelSetter} value={2000}>🏎️</button><button onClick={levelSetter} value={2500}>🏎️🏎️</button><button onClick={levelSetter} value={3000}>🏎️🏎️🏎️</button>
+                        <button onClick={() => setLevel(2000)}>🏎️</button><button onClick={() => setLevel(2500)}>🏎️🏎️</button><button onClick={() => setLevel(3500)}>🏎️🏎️🏎️</button>
                     </section>
                     <section className={styles.start}>
                         <Link onClick={toTop} to={`/genre1/${id}/${filter[0]?.name}`}>START STORY</Link>

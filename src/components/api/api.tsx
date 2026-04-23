@@ -13,8 +13,8 @@ type ApiContextType = {
     love: Story[];
     filter: Story[];
     adventure: Story[];
-    level: Story[];
-    setLevel: React.Dispatch<React.SetStateAction<Story[]>>;
+    level: number;
+    setLevel: React.Dispatch<React.SetStateAction<number>>;
     setFilter: React.Dispatch<React.SetStateAction<Story[]>>;
 };
 const ApiContext = createContext<ApiContextType | null>(null);

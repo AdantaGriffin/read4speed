@@ -8,7 +8,7 @@ function Story(){
     const toTop= () => {
         window.scrollTo(0,0);
     };
-    const {feelGood, horror, filter, setFilter} = useApi();
+    const {feelGood, horror, love, filter, setFilter} = useApi();
     //console.log(feelGood)
     const {id} = useParams();
     //console.log(id)
@@ -22,6 +22,10 @@ function Story(){
 
         case "FG":
             setFilter(feelGood.filter(x => x.id === id));
+            break;
+        
+        case "LV":
+            setFilter(love.filter(x => x.id === id));
             break;
     }
     }, [grabId])
@@ -37,7 +41,8 @@ function Story(){
 
                 <section className={styles.bio}>
                     <div className={styles.bioDetails}>
-                        word count: {filter[0]?.wordct}
+                        <img src={filter[0]?.cover}/>
+                        {/*word count: {filter[0]?.wordct}*/}
                     </div>
                     <div className={styles.bioDescription}>
                         <p>{filter[0]?.brief}</p>

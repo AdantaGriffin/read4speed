@@ -1,12 +1,31 @@
-.genre3{
+.love{
     position: relative;
-    top: 200px;
+    top: 210px;
     font-family: "Oswald";
+    border: 1px solid grey;
+    height: 70vh;
+    background-color: rgb(80, 159, 233);
+    padding: 10px;
 }
 .home{
     position: relative;
     z-index: 10;
     position: fixed;
-    bottom: 40px;
-    right: 45%;
+    bottom: 10px;
+    right: 5%;
+}
+div{
+    article{
+        height: 200px;
+        width: 120px;
+        img{
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+#horror{
+    background-image: url("images/dog.png");
+    background-size: 100% 100%;
 }

@@ -27,7 +27,7 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
     const [filter, setFilter] = useState<Story[]>([]); 
     const [love, setLove] = useState<Story[]>([]);
     const [adventure, setAdventure] = useState<Story[]>([]);
-    const [level, setLevel] = useState<Story[]>([]);
+    const [level, setLevel] = useState<number>(2500);
 
     useEffect(() => {
         async function getData(){

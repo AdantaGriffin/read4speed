@@ -1,12 +1,32 @@
-.genre4{
-    position: relative;
-    top: 200px;
+.adventure{
     font-family: "Oswald";
+    border: 1px solid grey;
+    height: 65vh;
+    background-color: #3A5A73;
+    padding: 10px;
 }
 .home{
     position: relative;
     z-index: 10;
     position: fixed;
-    bottom: 40px;
-    right: 45%;
+    bottom: 0px;
+    right: 5%;
+    color: #F5F1EA;
+}
+div{
+    article{
+        height: 200px;
+        width: 120px;
+        position: relative;
+        top: 5px;
+        left: 5px;
+        img{
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+        &:hover{
+            box-shadow: 1px 1px 1px 5px #F5F1EA;;
+        }
+    }
 }

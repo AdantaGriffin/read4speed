@@ -37,6 +37,25 @@
         border-radius: 10px;
     }
 }
+.bottom{
+    display: flex;
+    align-items: center;
+    .levels{
+        display: flex;
+        justify-content: space-evenly;
+        width: 200px;
+        button{
+            border-radius: 10px;
+            border: 2px solid #3A5A73;
+            &:hover{
+                cursor: pointer;
+            }
+            &:focus{
+                border: 2px solid orange;
+            }
+        }
+    }
+}
 .start{
     display: flex;
     align-items: center;

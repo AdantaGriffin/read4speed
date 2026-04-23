@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useApi } from '../api/api';
 
 function Home(){
-    const {feelGood, horror, love} = useApi();
+    const {feelGood, horror, love, adventure} = useApi();
     const toTop= () => {
         window.scrollTo(0,0);
     };
@@ -52,8 +52,16 @@ function Home(){
                     <Link onClick={toTop} className={styles.viewall} to="/genre3">view all</Link>
                 </section>
                 <section id="genre4" className={styles.genreSection}>
-                    <h2>genre 4</h2>
-                    <div>container</div>
+                    <h2>Adventure</h2>
+                    <div>
+                        {adventure.map(x => (
+                            <Link onClick={toTop} key={x.id} to={`/genre4/${x.id}`}>
+                                <article className={styles.story}>
+                                    <img src={x.cover}/>
+                                </article>
+                            </Link>
+                        ))}
+                    </div>
                     <Link onClick={toTop} className={styles.viewall} to="/genre4">view all</Link>
                 </section>
             </section>

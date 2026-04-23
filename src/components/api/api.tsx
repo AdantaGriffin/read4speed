@@ -12,6 +12,9 @@ type ApiContextType = {
     horror: Story[];
     love: Story[];
     filter: Story[];
+    adventure: Story[];
+    level: Story[];
+    setLevel: React.Dispatch<React.SetStateAction<Story[]>>;
     setFilter: React.Dispatch<React.SetStateAction<Story[]>>;
 };
 const ApiContext = createContext<ApiContextType | null>(null);
@@ -23,22 +26,25 @@ export function ApiProvider({ children }: { children: React.ReactNode }){
     const [horror, setHorror] = useState<Story[]>([]);
     const [filter, setFilter] = useState<Story[]>([]); 
     const [love, setLove] = useState<Story[]>([]);
+    const [adventure, setAdventure] = useState<Story[]>([]);
+    const [level, setLevel] = useState<Story[]>([]);
 
     useEffect(() => {
         async function getData(){
             const response = await fetch('/stories.json');
             const result = await response.json();
             //console.log(result.feelGood);
-            setFeelGood(result.feelGood)
-            setHorror(result.horror)
-            setLove(result.love)
+            setFeelGood(result.feelGood);
+            setHorror(result.horror);
+            setLove(result.love);
+            setAdventure(result.adventure);
         }
         getData()
     },[])
 
     return(
         <ApiContext.Provider
-            value={{feelGood, horror, love, filter, setFilter}}// pass all useState in here so outside components can use
+            value={{feelGood, horror, love, filter, adventure, level, setLevel, setFilter}}// pass all useState in here so outside components can use
         >
             {children}
         </ApiContext.Provider>

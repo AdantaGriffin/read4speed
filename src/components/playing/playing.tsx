@@ -8,7 +8,7 @@ function Playing(){
         window.scrollTo(0,0);
     };
     const navigate = useNavigate();
-    const {feelGood, horror, filter, setFilter} = useApi();
+    const {feelGood, horror, filter, setFilter, level} = useApi();
     const [visibleText, setVisibleText] = useState("");
     const [, setIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(true);
@@ -46,7 +46,7 @@ function Playing(){
             setVisibleText(words.slice(prev, nextIndex).join(" "));
             return nextIndex;
         });
-    }, 2000);
+    }, level);
 
     return () => clearInterval(interval);
 }, [isPlaying, words]);
